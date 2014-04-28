@@ -1,0 +1,9 @@
+https://svn.apache.org/repos/private/committers/docs
+https://svn.apache.org/repos/private/committers/donated-licenses
+https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1
+https://svn.apache.org/repos/asf/hadoop/common/branches/branch-2
+https://svn.apache.org/repos/asf/hadoop/common/site
+https://svn.apache.org/repos/asf/hadoop/common/trunk
+https://svn.apache.org/repos/asf/incubator/public/trunk/content/projects
+https://svn.apache.org/repos/asf/incubator/tez/site
+#https://dist.apache.org/repos/dist
