@@ -1,0 +1,21 @@
+[color]
+        ui = auto
+        interactive = auto
+        branch = auto
+        diff = auto
+        status = auto
+[alias]
+        st = status
+        ci = commit
+        co = checkout
+        br = branch
+        stat = status
+[log]
+        decorate = short
+[user]
+	email = hitesh@apache.org
+	name = Hitesh Shah
+[credential]
+	helper = osxkeychain
+[core]
+	autocrlf = input
