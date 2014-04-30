@@ -1,0 +1,19 @@
+#/bin/sh
+
+#Set append mode for history
+shopt -s histappend
+#Force commands to be appended to history immediately as compared to session terminate
+PROMPT_COMMAND='history -a'
+
+#Set history size limits
+HISTFILESIZE=1000000
+HISTSIZE=1000000
+
+#Set history to ignore commands with spaces at start and ignore dups
+HISTCONTROL=ignoreboth
+
+#Set certain commands to be ignored by history
+HISTIGNORE='ls:bg:fg:history:cd:exit:pwd:clear'
+
+#Ensure multi-line commands show up as a single command in history
+shopt -s cmdhist

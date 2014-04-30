@@ -7,7 +7,7 @@ export JAVA_HOME=`/usr/libexec/java_home`
 export PATH=$PATH:$HOME/bin:${JAVA_HOME}/bin:${SCALA_HOME}/bin:${ANT_HOME}/bin:${M2_HOME}:${M2_HOME}/bin:.
 
 source ~/bin/git-completion.bash
-source ~/bin/git-prompt.bash
+source ~/bin/git-prompt.sh
 PS1='[\u@\h \w$(__git_ps1 " (%s)")]\$ '
 
 export FINDBUGS_HOME=~/Software/findbugs-2.0.2
