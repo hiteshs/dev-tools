@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+  <property>
+     <name>mapreduce.job.user.name</name>
+     <value>${user.name}</value>
+   </property>
+
+  <property>
+     <name>mapreduce.framework.name</name>
+     <value>yarn-tez</value>
+   </property>
+
+  <property>
+    <name>yarn.apps.stagingDir</name>
+    <value>/user/${user.name}/staging</value>
+  </property>
+
+  <property>
+    <name>mapreduce.jobtracker.address</name>
+    <value>local</value>
+  </property>
+
+  <property>
+    <name>yarn.app.mapreduce.am.resource.mb</name>
+    <value>256</value>
+  </property>
+
+  <property>
+    <name>yarn.app.mapreduce.am.command-opts</name>
+    <!--value>-Xms256m -Xmx400m -agentpath:/Applications/YourKit_Java_Profiler_12.0.5.app/bin/mac/libyjpagent.jnilib=tracing,dir=/tmp/yourkit</value -->
+    <value>-Xmx400m</value>
+  </property>
+
+  <property>
+    <name>yarn.app.mapreduce.am.log.level</name>
+    <value>DEBUG</value>
+  </property>
+
+  <property>
+    <name>yarn.app.mapreduce.am.env</name>
+    <value>FOOBAR=ABCD</value>
+  </property>
+
+  <property>
+    <name>mapreduce.map.log.level</name>
+    <value>DEBUG</value>
+  </property>
+
+  <property>
+    <name>mapreduce.reduce.log.level</name>
+    <value>DEBUG</value>
+  </property>
+
+  <property>
+    <name>mapreduce.task.io.sort.mb</name>
+    <value>100</value>
+  </property>
+
+  <property>
+    <name>mapreduce.map.sort.spill.percent</name>
+    <value>0.1</value>
+  </property>
+
+  <property>
+    <name>mapreduce.map.output.compress</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>mapreduce.map.memory.mb</name>
+    <value>1024</value>
+  </property>
+
+  <property>
+    <name>mapreduce.map.java.opts</name>
+    <value>-Xmx200m</value> 
+    <!--<value>-Xmx200m -agentpath:/Applications/YourKit_Java_Profiler_12.0.5.app/bin/mac/libyjpagent.jnilib=tracing,dir=/tmp/yourkit</value>-->
+  </property>
+
+  <property>
+    <name>mapreduce.reduce.memory.mb</name>
+    <value>1024</value>
+  </property>
+
+  <property>
+    <name>mapreduce.reduce.java.opts</name>
+    <value>-Xmx200m</value>
+    <!-- value>-Xmx200m  -agentpath:/Applications/YourKit_Java_Profiler_12.0.5.app/bin/mac/libyjpagent.jnilib=tracing,dir=/tmp/yourkit</value> -->
+  </property>
+
+  <property>
+    <name>mapreduce.am.max-attempts</name>
+    <value>4</value>
+  </property>
+
+
+</configuration>

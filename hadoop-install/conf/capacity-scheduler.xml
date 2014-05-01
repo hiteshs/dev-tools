@@ -1,0 +1,130 @@
+<configuration>
+
+  <property>
+    <name>yarn.scheduler.capacity.maximum-applications</name>
+    <value>10000</value>
+    <description>
+      Maximum number of applications that can be pending and running.
+    </description>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.maximum-am-resource-percent</name>
+    <value>0.7</value>
+    <description>
+      Maximum percent of resources in the cluster which can be used to run 
+      application masters i.e. controls number of concurrent running
+      applications.
+    </description>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.queues</name>
+    <value>default</value>
+    <description>
+      The queues at the this level (root is the root queue).
+    </description>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.a.capacity</name>
+    <value>50</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.b.capacity</name>
+    <value>50</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.default.capacity</name>
+    <value>100</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.default.user-limit-factor</name>
+    <value>1</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.a.user-limit-factor</name>
+    <value>1</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.b.user-limit-factor</name>
+    <value>1</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.default.maximum-capacity</name>
+    <value>100</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.a.maximum-capacity</name>
+    <value>100</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.b.maximum-capacity</name>
+    <value>100</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.default.state</name>
+    <value>RUNNING</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.a.state</name>
+    <value>RUNNING</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.a.state</name>
+    <value>RUNNING</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.default.acl_submit_applications</name>
+    <value>*</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.default.acl_administer_queue</name>
+    <value>*</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.a.acl_submit_applications</name>
+    <value>*</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.a.acl_administer_queue</name>
+    <value>*</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.b.acl_submit_applications</name>
+    <value>*</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.root.b.acl_administer_queue</name>
+    <value>*</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.capacity.node-locality-delay</name>
+    <value>-1</value>
+    <description>
+      Number of missed scheduling opportunities after which the CapacityScheduler 
+      attempts to schedule rack-local containers. 
+      Typically this should be set to number of racks in the cluster, this 
+      feature is disabled by default, set to -1.
+    </description>
+  </property>
+
+</configuration>

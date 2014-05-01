@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+<property>
+  <name>fs.default.name</name>
+  <value>hdfs://localhost:19000</value>
+</property>
+
+<!--
+<property>
+  <name>ipc.client.fallback-to-simple-auth-allowed</name>
+  <value>false</value>
+</property>
+-->
+
+</configuration>

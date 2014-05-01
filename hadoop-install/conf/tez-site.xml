@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+<property>
+  <name>tez.lib.uris</name>
+  <value>${fs.default.name}/tez/tez-0.5.0-incubating-SNAPSHOT,${fs.default.name}/tez/tez-0.5.0-incubating-SNAPSHOT/lib</value> 
+</property>
+
+<property>
+  <name>tez.am.resource.memory.mb</name>
+  <value>512</value>
+</property>
+
+<property>
+  <name>tez.am.container.reuse.enabled</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>tez.am.container.reuse.rack-fallback.enabled</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>tez.am.container.reuse.non-local-fallback.enabled</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>tez.am.container.session.delay-allocation-millis</name>
+  <value>-1</value>
+</property>
+
+<property>
+  <name>tez.am.container.reuse.locality.delay-allocation-millis</name>
+  <value>100</value>
+</property>
+
+
+<property>
+  <name>yarn.app.mapreduce.am.resource.mb</name>
+  <value>512</value>
+</property>
+
+<property>
+  <name>tez.am.log.level</name>
+  <value>DEBUG</value>
+</property>
+
+<property>
+  <name>tez.session.am.dag.submit.timeout.secs</name>
+  <value>180</value>
+</property>
+
+<!-- session pre-warm -->
+
+<property>
+  <name>tez.session.pre-warm.enabled</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>tez.session.pre-warm.dag-plan.pb.path</name>
+  <value>/tmp/foobar</value>
+</property>
+
+<property>
+  <name>tez.generate.dag.viz</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>tez.dag.recovery.enabled</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>tez.yarn.ats.enabled</name>
+  <value>true</value>
+</property>
+
+
+<property>
+  <name>tez.dag.recovery.max.unflushed.events</name>
+  <value>0</value>
+</property>
+
+<property>
+  <name>tez.dag.recovery.flush.interval.secs</name>
+  <value>-1</value>
+</property>
+
+<property>
+ <name>tez.am.shuffle-vertex-manager.enable.auto-parallel</name>
+  <value>false</value>
+</property>
+
+<property>
+ <name>tez.am.max.app.attempts</name>
+  <value>4</value>
+</property>
+
+
+</configuration>
