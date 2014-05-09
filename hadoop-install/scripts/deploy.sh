@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source ./setVersions.sh
-
 sh ./deployTar.sh;
 
 sh ./hdfs-stop.sh ; sleep 5s;

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export HADOOP_ROOT_LOGGER="DEBUG,RFA"
 export YARN_ROOT_LOGGER="DEBUG,RFA"
 $HADOOP_HDFS_HOME/bin/hdfs namenode -format

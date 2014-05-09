@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export HADOOP_ROOT_LOGGER="DEBUG,RFA"
 export YARN_ROOT_LOGGER="DEBUG,RFA"
 $HADOOP_YARN_HOME/sbin/yarn-daemon.sh start resourcemanager

@@ -57,21 +57,16 @@ export HADOOP_OPTS=" -Djava.awt.headless=true "
 # The scheduling priority for daemon processes.  See 'man nice'.
 # export HADOOP_NICENESS=10
 
-version=$HADOOP_VERSION
 install_dir=${INSTALL_DIR}
-
-if [[ -z ${hadoop_version} ]]; then
-  version="3.0.0-SNAPSHOT"
-fi
 
 export YARN_NODEMANAGER_OPTS=" -Djava.awt.headless=true "
 export YARN_RESOURCEMANAGER_OPTS=" -Djava.awt.headless=true "
 
-export HADOOP_MAPRED_HOME=${install_dir}/hadoop-mapreduce-${hadoop_version}
-export HADOOP_COMMON_HOME=${install_dir}/hadoop-common-${hadoop_version}
+export HADOOP_MAPRED_HOME=${install_dir}/hadoop-mapreduce-${HADOOP_VERSION}
+export HADOOP_COMMON_HOME=${install_dir}/hadoop-common-${HADOOP_VERSION}
 export HADOOP_PREFIX=$HADOOP_COMMON_HOME
-export HADOOP_HDFS_HOME=${install_dir}/hadoop-hdfs-${hadoop_version}
-export HADOOP_YARN_HOME=${install_dir}/hadoop-yarn-${hadoop_version}
+export HADOOP_HDFS_HOME=${install_dir}/hadoop-hdfs-${HADOOP_VERSION}
+export HADOOP_YARN_HOME=${install_dir}/hadoop-yarn-${HADOOP_VERSION}
 export HADOOP_CONF_DIR=${install_dir}/conf
 export MAPRED_CONF_DIR=$HADOOP_CONF_DIR
 export YARN_CONF_DIR=$HADOOP_CONF_DIR
