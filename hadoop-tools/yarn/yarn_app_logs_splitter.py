@@ -38,6 +38,7 @@ with open(app_logs_file) as f:
     if (l.startswith("Container: container")):
       entry = l.split(":")[1].strip()
       current_container_id = entry.expandtabs(1).split(" ")[0].strip()
+      log_started = False
       continue
 
     if (current_container_id == ""):
