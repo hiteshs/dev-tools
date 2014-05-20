@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sh ./copyTar.sh;
 sh ./deployTar.sh;
 
 sh ./hdfs-stop.sh ; sleep 5s;
