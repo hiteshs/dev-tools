@@ -1,0 +1,11 @@
+export HADOOP_VERSION="2.8.0-SNAPSHOT"
+export TEZ_VERSION="0.9.0-SNAPSHOT"
+export INSTALL_DIR=/Users/hitesh/install/hadoop2/
+export HIVE_VERSION="1.2.0-SNAPSHOT"
+export hadoopDir="/Users/Hitesh/dev/apache/hadoop/"
+export tezDir="/Users/Hitesh/dev/apache/tez/"
+#export hadoopDir="/Users/Hitesh/dev/hwx/hadoop/"
+#export HADOOP_VERSION="2.7.1-SNAPSHOT"
+#export tezDir="/Users/Hitesh/dev/hwx/tez/"
+#export TEZ_VERSION="0.7.1-SNAPSHOT"
+source conf/hadoop-env.sh

@@ -1,16 +1,25 @@
 #!/bin/bash 
 
-if [[ -z ${hiveDir} ]]; then
+if [[ "${hiveDir}" == "" ]]; then
   hiveDir="/Users/Hitesh/dev/apache/hive/"
 fi
 
-if [[ -z ${tezDir} ]]; then
-  tezDir="/Users/Hitesh/dev/apache/incubator-tez/"
+if [[ "${tezDir}" == "" ]]; then
+  tezDir="/Users/Hitesh/dev/hwx/tez/"
 fi
 
-if [[ -z ${hadoopDir} ]]; then
-  hadoopDir="/Users/Hitesh/dev/apache/hadoop-common/"
+if [[ -z "${hadoopDir}" ]]; then
+  hadoopDir="/Users/Hitesh/dev/hwx/hadoop/"
 fi
+
+if [[ -z "${sparkDir}" ]]; then
+  sparkDir="/Users/Hitesh/dev/apache/spark-v16/"
+fi
+
+echo "Hadoop Dir: ${hadoopDir}"
+echo "Tez Dir: ${tezDir}"
+echo "Hive Dir: ${hiveDir}"
+echo "Spark Dir: ${sparkDir}"
 
 rm -f hadoop-common-${HADOOP_VERSION}.tar.gz
 rm -f hadoop-hdfs-${HADOOP_VERSION}.tar.gz

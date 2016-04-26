@@ -1,7 +1,8 @@
 #!/bin/bash
 
-sh ./copyTar.sh;
-sh ./deployTar.sh;
+ln -sf ${HADOOP_HDFS_HOME}/libexec/*-config.sh  ${HADOOP_COMMON_HOME}/libexec/
+ln -sf ${HADOOP_YARN_HOME}/libexec/*-config.sh  ${HADOOP_COMMON_HOME}/libexec/
+ln -sf ${HADOOP_MAPRED_HOME}/libexec/*-config.sh  ${HADOOP_COMMON_HOME}/libexec/
 
 sh ./hdfs-stop.sh ; sleep 5s;
 ps wwaux | grep java | grep -v grep  | wc -l;
