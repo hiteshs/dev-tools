@@ -7,12 +7,29 @@
 
 <property>
   <name>tez.lib.uris</name>
-  <value>${fs.default.name}/tez/tez-0.5.0-incubating-SNAPSHOT,${fs.default.name}/tez/tez-0.5.0-incubating-SNAPSHOT/lib</value> 
+  <value>${fs.default.name}/tez/tez-${TEZ_VERSION}.tar.gz</value> 
 </property>
+
+<!--
+<property>
+  <name>tez.aux.uris</name>
+  <value>/tmp/shims/</value> 
+</property>
+-->
 
 <property>
   <name>tez.am.resource.memory.mb</name>
   <value>512</value>
+</property>
+
+<property>
+  <name>tez.am.resource.cpu.vcores</name>
+  <value>2</value>
+</property>
+
+<property>
+  <name>tez.am.launch.cmd-opts</name>
+  <value>-agentpath:/Users/hitesh/Software/yjp/Contents/Resources/bin/mac/libyjpagent.jnilib=disablej2ee,tracing,alloceach=1000,onexit=snapshot,dir=/tmp/</value>
 </property>
 
 <property>
@@ -42,13 +59,8 @@
 
 
 <property>
-  <name>yarn.app.mapreduce.am.resource.mb</name>
-  <value>512</value>
-</property>
-
-<property>
   <name>tez.am.log.level</name>
-  <value>DEBUG</value>
+  <value>DEBUG;org.apache.hadoop.ipc=INFO;org.apache.hadoop.security=INFO;</value>
 </property>
 
 <property>
@@ -79,6 +91,11 @@
 </property>
 
 <property>
+  <name>tez.am.launch.env</name>
+  <value>foo=$HADOOP_CLASSPATH,bar=abc</value>
+</property>
+
+<property>
   <name>tez.yarn.ats.enabled</name>
   <value>true</value>
 </property>
@@ -96,12 +113,114 @@
 
 <property>
  <name>tez.am.shuffle-vertex-manager.enable.auto-parallel</name>
-  <value>false</value>
+  <value>true</value>
 </property>
 
 <property>
  <name>tez.am.max.app.attempts</name>
   <value>4</value>
+</property>
+
+<!--
+<property>
+ <name>tez.history.logging.service.class</name>
+  <value>org.apache.tez.dag.history.logging.ats.ATSHistoryLoggingService</value>
+</property>
+-->
+
+<property>
+  <name>tez.history.logging.service.class</name>
+  <value>org.apache.tez.dag.history.logging.ats.ATSV15HistoryLoggingService</value>
+</property>
+
+<property>
+ <name>tez.simple.history.logging.dir</name>
+ <value>/tmp/tez-history/</value>
+</property>
+
+<!--
+<property>
+ <name>tez.task.launch.cmd-opts</name>
+ <value> -XX:+UseG1GC  -XX:+UseParallelGC</value>
+</property>
+-->
+
+<property>
+ <name>tez.task.log.level</name>
+ <value>DEBUG;org.apache.hadoop.ipc=INFO;org.apache.hadoop.security=INFO;</value>
+</property>
+
+
+<property>
+ <name>tez.cluster.additional.classpath.prefix</name>
+ <value>foo:bar</value>
+</property>
+
+<property>
+ <name>tez.runtime.convert.user-payload.to.history-text</name>
+ <value>true</value>
+</property>
+
+<property>
+ <name>tez.am.tez-ui.history-url.template</name>
+ <value>__HISTORY_URL_BASE__/#/tez-app/__APPLICATION_ID__</value>
+</property>
+
+<property>
+ <name>tez.tez-ui.history-url.base</name>
+ <value>http://localhost:9001/</value>
+</property>
+
+
+<property>
+  <name>tez.task.resource.memory.mb</name>
+  <value>512</value>
+</property>
+
+<property>
+  <name>tez.task.resource.cpu.vcores</name>
+  <value>1</value>
+</property>
+
+<property>
+  <name>tez.am.acls.enabled</name>
+  <value>false</value>
+</property>
+
+<property>
+  <name>tez.am.view-acls</name>
+  <value>*</value>
+</property>
+
+<property>
+  <name>tez.runtime.io.sort.mb</name>
+  <value>128</value>
+</property>
+
+<property>
+  <name>tez.generate.debug.artifacts</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>tez.counters.max</name>
+  <value>50</value>
+</property>
+
+<property>
+  <name>tez.shuffle-vertex-manager.min-src-fraction</name>
+  <value>0.2</value>
+</property>
+
+<property>
+  <name>tez.shuffle-vertex-manager.max-src-fraction</name>
+  <value>0.4</value>
+</property>
+
+
+<property>
+  <name>tez.am.total.resource.reporting.mechanism</name>
+  <value>headroom</value>
 </property>
 
 

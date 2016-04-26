@@ -17,4 +17,14 @@
 </property>
 -->
 
+<property>
+  <name>hadoop.http.filter.initializers</name>
+  <value>org.apache.hadoop.security.HttpCrossOriginFilterInitializer</value>
+</property>
+
+<property>
+  <name>dfs.caller.context.enabled</name>
+  <value>true</value>
+</property>
+
 </configuration>

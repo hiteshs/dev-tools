@@ -2,7 +2,8 @@
 <configuration>
 
 <!-- All resourcemanager related configuration properties -->
-  <property>
+
+ <property>
     <name>yarn.resourcemanager.address</name>
     <value>localhost:8020</value>
   </property> 
@@ -23,6 +24,21 @@
     <value>true</value>
   </property>
 
+  <property>
+    <name>yarn.timeline-service.enabled</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>yarn.timeline-service.generic-application-history.enabled</name>
+    <value>false</value>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.system-metrics-publisher.enabled</name>
+    <value>true</value>
+  </property>
+
 <!-- 
   <property>
     <name>yarn.resourcemanager.scheduler.class</name>
@@ -35,6 +51,21 @@
     <value>512</value>
   </property>
  
+  <property>
+    <name>yarn.scheduler.maximum-allocation-mb</name>
+    <value>4196</value>
+  </property>
+ 
+  <property>
+    <name>yarn.scheduler.minimum-allocation-vcores</name>
+    <value>1</value>
+  </property>
+
+  <property>
+    <name>yarn.scheduler.maximum-allocation-vcores</name>
+    <value>2</value>
+  </property>
+
   <property>
     <name>yarn.server.resourcemanager.application.expiry.interval</name>
     <value>60000</value>
@@ -92,12 +123,107 @@
 
   <property>
     <name>yarn.log.server.url</name>
-    <value>localhost:19888/jobhistory/logs/</value>
+    <value>http://localhost:19888/jobhistory/logs/</value>
   </property>
 
   <property>
     <name>yarn.nodemanager.resource.memory-mb</name>
     <value>5120</value>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.connect.max-wait.ms</name>
+    <value>120000</value>
+  </property>
+
+  <property>
+    <name>yarn.webservices.http-cross-origin.enabled</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>yarn.timeline-service.http-cross-origin.enabled</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>yarn.acl.enable</name>
+    <value>false</value>
+  </property>
+
+  <property>
+    <name>yarn.admin.acl</name>
+    <value>*</value>
+  </property>
+
+  <property>
+    <name>yarn.timeline-service.ui-names</name>
+    <value>tezui,tezui2</value>
+  </property>
+
+  <property>
+    <name>yarn.timeline-service.ui-web-path.tezui</name>
+    <value>/tezui</value>
+  </property>
+
+  <property>
+    <name>yarn.timeline-service.ui-on-disk-path.tezui</name>
+    <value>/Users/hitesh/install/hadoop2/tez/ui/</value>
+  </property>
+
+
+  <property>
+    <name>yarn.timeline-service.ui-web-path.tezui2</name>
+    <value>/tezui2</value>
+  </property>
+
+  <property>
+    <name>yarn.timeline-service.ui-on-disk-path.tezui2</name>
+    <value>/Users/hitesh/install/hadoop2/tez/tez-ui-0.8.2-SNAPSHOT.war</value>
+  </property>
+
+  <property>
+    <name>yarn.timeline-service.entity-file-store.active-dir</name>
+    <value>/tmp/ats/active/</value>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.webapp.cross-origin.enabled</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>yarn.timeline-service.version</name>
+    <value>1.5</value>
+  </property>
+  
+  <property>
+    <name>yarn.timeline-service.store-class</name>
+    <value>org.apache.hadoop.yarn.server.timeline.EntityGroupFSTimelineStore</value>
+  </property>
+
+  <property>
+    <name>yarn.timeline-service.entity-group-fs-store.active-dir</name>
+    <value>/tmp/ats/active/</value>
+    </property>
+  
+  <property>
+    <name>yarn.timeline-service.entity-group-fs-store.done-dir</name>
+    <value>/tmp/ats/done/</value>
+  </property>
+
+  <property>
+    <name>yarn.timeline-service.entity-group-fs-store.group-id-plugin-classes</name>
+    <value>org.apache.tez.dag.history.logging.ats.TimelineCachePluginImpl</value>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.recovery.enabled</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.recovery.enabled</name>
+    <value>false</value>
   </property>
 
 </configuration>

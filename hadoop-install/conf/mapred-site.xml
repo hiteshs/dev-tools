@@ -12,7 +12,7 @@
 
   <property>
      <name>mapreduce.framework.name</name>
-     <value>yarn-tez</value>
+     <value>yarn</value>
    </property>
 
   <property>
@@ -56,10 +56,12 @@
     <value>DEBUG</value>
   </property>
 
+<!--
   <property>
     <name>mapreduce.task.io.sort.mb</name>
     <value>100</value>
   </property>
+-->
 
   <property>
     <name>mapreduce.map.sort.spill.percent</name>
@@ -73,24 +75,24 @@
 
   <property>
     <name>mapreduce.map.memory.mb</name>
-    <value>1024</value>
+    <value>512</value>
   </property>
 
   <property>
     <name>mapreduce.map.java.opts</name>
-    <value>-Xmx200m</value> 
-    <!--<value>-Xmx200m -agentpath:/Applications/YourKit_Java_Profiler_12.0.5.app/bin/mac/libyjpagent.jnilib=tracing,dir=/tmp/yourkit</value>-->
+    <value>-Dtest</value> 
+    <!-- <value>-Xmx200m -agentpath:/Applications/YourKit_Java_Profiler_12.0.5.app/bin/mac/libyjpagent.jnilib=tracing,dir=/tmp/yourkit</value> -->
   </property>
 
   <property>
     <name>mapreduce.reduce.memory.mb</name>
-    <value>1024</value>
+    <value>512</value>
   </property>
 
   <property>
     <name>mapreduce.reduce.java.opts</name>
-    <value>-Xmx200m</value>
-    <!-- value>-Xmx200m  -agentpath:/Applications/YourKit_Java_Profiler_12.0.5.app/bin/mac/libyjpagent.jnilib=tracing,dir=/tmp/yourkit</value> -->
+    <value>-Dtest</value>
+    <!--<value>-Xmx200m  -agentpath:/Applications/YourKit_Java_Profiler_12.0.5.app/bin/mac/libyjpagent.jnilib=tracing,dir=/tmp/yourkit</value> -->
   </property>
 
   <property>
@@ -98,5 +100,16 @@
     <value>4</value>
   </property>
 
+  <property>
+    <name>mapreduce.task.io.sort.mb</name>
+    <value>200</value>
+  </property>
+
+<!--
+  <property>
+    <name>mapreduce.map.env</name>
+    <value>FOOBAR=ABCD1</value>
+  </property>
+-->
 
 </configuration>

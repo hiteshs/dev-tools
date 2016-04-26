@@ -70,3 +70,4 @@ export HADOOP_YARN_HOME=${install_dir}/hadoop-yarn-${HADOOP_VERSION}
 export HADOOP_CONF_DIR=${install_dir}/conf
 export MAPRED_CONF_DIR=$HADOOP_CONF_DIR
 export YARN_CONF_DIR=$HADOOP_CONF_DIR
+export HADOOP_OPTS=" -DTEZ_VERSION=${TEZ_VERSION} "

@@ -10,4 +10,10 @@
     <value>1</value>
   </property>
 
+<property>
+ <name>dfs.client.retry.policy.enabled</name>
+ <value>true</value>
+ <description> Enables HDFS client retry in case of NameNode failure.</description>
+</property>
+
 </configuration>
