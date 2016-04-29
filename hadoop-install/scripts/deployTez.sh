@@ -14,7 +14,7 @@ ${HADOOP_COMMON_HOME}/bin/hadoop dfs -put ./tez-${TEZ_VERSION}.tar.gz /tez/
 
 mkdir -p ./tez/ui/
 cd ./tez/ui
-jar -xvf ../tez-ui2-${TEZ_VERSION}.war
+jar -xvf ../tez-ui-${TEZ_VERSION}.war
 cd -
 
 #sed -i '' -e "s/\/\/ timelineBaseUrl/timelineBaseUrl/g" ./tez/ui/scripts/configs.js
